@@ -1,6 +1,6 @@
 modue github.com/jorgealbertogomezgomez77@gmail.com/social-app-like-twitter
 
-go 1.12
+go1.15.8 windows/amd64
 
 require (
 
