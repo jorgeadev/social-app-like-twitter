@@ -16,10 +16,11 @@ func Handlers() {
 
 	/* Routers */
 	router.HandleFunc("/register", middlewares.CheckDB(routers.Register)).Methods("POST")
+	router.HandleFunc("/login", middlewares.CheckDB(routers.Login)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
-		PORT = "8080"
+		PORT = "8085"
 	}
 	handler := cors.AllowAll().Handler(router)
 	log.Fatal(http.ListenAndServe(":"+PORT, handler))

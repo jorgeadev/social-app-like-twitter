@@ -8,7 +8,7 @@ import (
 )
 
 /* CheckUserExist receive an email as parameter and check if it in database */
-func CheckUserExist (email string) (models.User, bool,string) {
+func CheckUserExist (email string) (models.User, bool, string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
