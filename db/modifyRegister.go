@@ -28,7 +28,7 @@ func ModifyRegister(u models.User, ID string) (bool, error) {
 	register["birthDate"] = u.BirthDate
 
 	if len(u.Avatar) > 0 {
-		register["banner"] = u.Avatar
+		register["avatar"] = u.Avatar
 	}
 
 	if len(u.Banner) > 0 {
